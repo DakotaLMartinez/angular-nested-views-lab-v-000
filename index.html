@@ -5,6 +5,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Angular Application</title>
+    <link rel="stylesheet" href="https://npmcdn.com/tachyons@4.0.1/css/tachyons.min.css"/>
 
     <style>
         body {
@@ -43,11 +44,20 @@
 <body>
 
 <div ng-app="app" class="app">
+    <nav class="nav bg-light-gray">
+        <ul class="list ma0 ph4-ns ph2">
+            <li class="dib-ns pt2 pr2"><a class="bg-light-gray no-underline pa2 pl0 h2" href="" ui-sref="home">Home</a></li>
+            <li class="dib-ns pa2"><a class="bg-light-gray no-underline pa2 h2" href="" ui-sref="home.timeline">Timeline</a></li>
+            <li class="dib-ns pa2"><a class="bg-light-gray no-underline pa2 h2" href="" ui-sref="home.notifications">Notifications</a></li>
+            <li class="dib-ns pa2"><a class="bg-light-gray no-underline pa2 h2" href="" ui-sref="home.user">User Profile</a></li>
+        </ul>
+    </nav>
+    
     <div ui-view></div>
 </div>
 
 <script src="js/angular.js"></script>
-<script src="js/angular-route.js"></script>
+<script src="js/angular-ui-router.js"></script>
 <script src="js/app/app.js"></script>
 
 </body>
